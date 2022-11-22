@@ -12,5 +12,7 @@ module.exports = {
   ],
   plugins: ['jest'],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'no-console': 'off',
+  },
 }

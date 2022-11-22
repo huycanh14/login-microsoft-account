@@ -1,6 +1,8 @@
+import path from 'path'
+import fs from 'fs'
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+const config =  {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - login-app-fe',
@@ -32,10 +34,33 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/composition-api/module'
   ],
+  env: {
+    ...process.env
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    // proxy: true
+    baseURL: 'https://daotaodaihoc.humg.edu.vn/api/',
+  },
+
+  // server: {
+  //   port: 8080, // default: 3000
+  //   host: '0.0.0.0' // default: localhost,
+  // },
+  server: {
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem'))
+    },
+    // port: 8080, // default: 3000
+    // host: '0.0.0.0'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -57,5 +82,19 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: false,
+  },
 }
+// if (process.env.NODE_ENV === "development") {
+//   config.server = {
+//     https: {
+//       key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+//       cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem'))
+//     },
+//      port: 8080,
+//     host: '0.0.0.0'
+//   }
+// }
+
+export default config

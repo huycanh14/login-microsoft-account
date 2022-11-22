@@ -1,0 +1,39 @@
+{
+  "Routes": [],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5001"
+  },
+  "Routes": [
+    // API A.Q
+    {
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "my-api.humg.edu.vn",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/login",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "Key": "A.Q-api-login"
+    },
+    {
+      "DownstreamPathTemplate": "/v1/bpi/currentprice.json", // api cuaa api le (api thuc su)
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.coindesk.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bophanmotcua/donvis", // api cua getway
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "bpmc-donvi",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+  ]
+}
