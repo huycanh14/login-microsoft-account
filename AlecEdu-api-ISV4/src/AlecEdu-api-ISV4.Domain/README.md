@@ -1,0 +1,2 @@
+- Chứa tất cả các thực thể (entites), enums, ngoại lệ (exceptions), interfaces, types và logic cụ thể
+- Được coi là trung tâm

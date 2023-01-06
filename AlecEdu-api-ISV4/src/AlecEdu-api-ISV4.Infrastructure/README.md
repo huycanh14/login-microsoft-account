@@ -1,0 +1,3 @@
+- Triển khai những gì mà domain đưa ra
+- Triển khai service mà phía Application cần mở rộng thêm
+- Lớp này chứa các lớp để truy cập các tài nguyên bên ngoài như hệ thống tệp, dịch vụ web, smtp, v.v. Các lớp này phải dựa trên các interfaces được xác định trong Application layers

@@ -91,7 +91,7 @@ export default defineComponent({
     const handleCredentialResponse = async (google: any) => {
       // console.log(response)
       const response = await $axios.$post(
-        `http://localhost:5001/api/auth/login/external-google`,
+        `https://localhost:5001/api/auth/login/external-google`,
         { token: google?.credential }
       )
       if (response.resultCode !== 201) {
