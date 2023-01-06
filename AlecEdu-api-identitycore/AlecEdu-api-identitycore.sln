@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlecEdu-api-identitycore.API", "src\AlecEdu-api-identitycore.API\AlecEdu-api-identitycore.API.csproj", "{8D560A0D-C7B3-46D4-A7B6-BC907129721A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ECDDD6C4-7E11-4156-8DCF-AEB2AD522560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlecEdu-api-identitycore.Application", "src\AlecEdu-api-identitycore.Application\AlecEdu-api-identitycore.Application.csproj", "{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlecEdu-api-identitycore.Domain", "src\AlecEdu-api-identitycore.Domain\AlecEdu-api-identitycore.Domain.csproj", "{4A558259-D745-41F1-96BC-5182A48CF945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlecEdu-api-identitycore.Infrastructure", "src\AlecEdu-api-identitycore.Infrastructure\AlecEdu-api-identitycore.Infrastructure.csproj", "{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D560A0D-C7B3-46D4-A7B6-BC907129721A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D560A0D-C7B3-46D4-A7B6-BC907129721A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D560A0D-C7B3-46D4-A7B6-BC907129721A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D560A0D-C7B3-46D4-A7B6-BC907129721A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A558259-D745-41F1-96BC-5182A48CF945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A558259-D745-41F1-96BC-5182A48CF945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A558259-D745-41F1-96BC-5182A48CF945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A558259-D745-41F1-96BC-5182A48CF945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D560A0D-C7B3-46D4-A7B6-BC907129721A} = {ECDDD6C4-7E11-4156-8DCF-AEB2AD522560}
+		{9C8337A2-2DAE-47D4-9C69-BDE571B91BE3} = {ECDDD6C4-7E11-4156-8DCF-AEB2AD522560}
+		{4A558259-D745-41F1-96BC-5182A48CF945} = {ECDDD6C4-7E11-4156-8DCF-AEB2AD522560}
+		{ED56CC6D-C58B-4E24-870A-821FF7BBBE4D} = {ECDDD6C4-7E11-4156-8DCF-AEB2AD522560}
+	EndGlobalSection
+EndGlobal

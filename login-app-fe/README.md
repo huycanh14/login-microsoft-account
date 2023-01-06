@@ -66,3 +66,11 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### Login with google
+`https://gist.github.com/srestraj/eed9d2f199ac4024e029e3012ff2829b
+https://gist.github.com/srestraj/c61d0a025f53ab7f99bd875eace5cc84
+https://nipo-plus-doc.sndbox.jp/tech/gapi/index.html
+https://github.com/israelquiroz93/JWTAppYT/blob/master/JWTAppYT/Controllers/AuthController.cs
+https://levelup.gitconnected.com/how-to-sign-in-with-google-in-angular-and-use-jwt-based-net-core-api-authentication-rsa-6635719fb86c
+`

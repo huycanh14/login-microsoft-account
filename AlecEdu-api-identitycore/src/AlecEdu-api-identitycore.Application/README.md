@@ -1,0 +1,3 @@
+- Cài đặt CQRS tại đây
+- Chứa các logic của ứng dụng. Phụ thuộc vào domain layer, nhưng không phụ thuộc vào bất kỳ layer hay project nào khác
+- Ví dụ: Nếu như cần thêm một dịch vụ thông báo, một interface mới sẽ được thêm vào Application layer và và việc triển khai sẽ được tạo trong Infrastructure Layer
