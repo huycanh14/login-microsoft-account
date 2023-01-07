@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "747698519209",
+    "project_id": "alectapidev",
+    "storage_bucket": "alectapidev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747698519209:android:39cfec06623d3c486b3db8",
+        "android_client_info": {
+          "package_name": "com.alec_edu.login_app_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747698519209-etdi5geinr3gh5mo8630b41ct4n0l2di.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApEeGaZI8XuDtVM6CTV4M3bPADQyqp40U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747698519209-etdi5geinr3gh5mo8630b41ct4n0l2di.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

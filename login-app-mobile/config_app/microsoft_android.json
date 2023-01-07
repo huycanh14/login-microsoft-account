@@ -1,7 +1,7 @@
-com.example.login_app_mobileandroid:host="com.example.login_app_mobile"{
+com.alec_edu.login_app_mobileandroid:host="com.alec_edu.login_app_mobile"{
   "client_id" : "d4850bec-4af5-44ea-97ed-04d811729054",
   "authorization_user_agent" : "DEFAULT",
-  "redirect_uri" : "msauth://com.example.login_app_mobile/2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D",
+  "redirect_uri" : "msauth://com.alec_edu.login_app_mobile/2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D",
   "authorities" : [
     {
       "type": "AAD",

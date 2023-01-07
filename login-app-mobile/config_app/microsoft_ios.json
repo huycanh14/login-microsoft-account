@@ -1,4 +1,4 @@
 let kClientID = "d4850bec-4af5-44ea-97ed-04d811729054"
-let kRedirectUri = "msauth.com.example.loginAppMobile://auth"
+let kRedirectUri = "msauth.com.alecEdu.loginAppMobile://auth"
 let kAuthority = "https://login.microsoftonline.com/organizations"
 let kGraphEndpoint = "https://graph.microsoft.com/"

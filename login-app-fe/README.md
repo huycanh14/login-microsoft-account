@@ -73,4 +73,5 @@ https://gist.github.com/srestraj/c61d0a025f53ab7f99bd875eace5cc84
 https://nipo-plus-doc.sndbox.jp/tech/gapi/index.html
 https://github.com/israelquiroz93/JWTAppYT/blob/master/JWTAppYT/Controllers/AuthController.cs
 https://levelup.gitconnected.com/how-to-sign-in-with-google-in-angular-and-use-jwt-based-net-core-api-authentication-rsa-6635719fb86c
+https://pellerex.com/blog/google-auth-for-react-with-aspnet-identity
 `

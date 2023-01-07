@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using AlecEdu_api.Application;
 using AlecEdu_api.Domain.Extensions;
 using AlecEdu_api.Infrastructure;
@@ -11,7 +12,10 @@ builder.Logging.AddFile(builder.Configuration.GetSection("Logging"));
 
 // Add services to the container.
 builder.Host.AddAppConfigurations();
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>

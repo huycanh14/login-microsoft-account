@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:aad_oauth/aad_oauth.dart';
 import 'package:aad_oauth/model/config.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../common/components/base_input/text/base_input_text.dart';
 import '../../common/configs/service_location.dart';
@@ -22,7 +24,21 @@ class _HomeViewState extends State<HomeView> {
   final GlobalKey<FormState> _form = GlobalKey<FormState>();
   final TextEditingController _email = TextEditingController();
   final formValidationManager = FormValidationManager();
+  final dio = Dio();
   String valueDefault = "111";
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: <String>[
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _googleSignIn.signInSilently();
+  }
 
   @override
   void dispose() {
@@ -37,8 +53,8 @@ class _HomeViewState extends State<HomeView> {
       clientId: 'd4850bec-4af5-44ea-97ed-04d811729054',
       scope: 'openid profile offline_access',
       redirectUri: Platform.isAndroid
-          ? 'msauth://com.example.login_app_mobile/2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D'
-          : 'msauth.com.example.loginAppMobile://auth',
+          ? 'msauth://com.alec_edu.login_app_mobile/2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D'
+          : 'msauth.com.alecEdu.loginAppMobile://auth',
       navigatorKey: locator<NavigationService>().navigatorKey,
     );
     final AadOAuth oauth = AadOAuth(config);
@@ -85,6 +101,32 @@ class _HomeViewState extends State<HomeView> {
               ),
             ),
             Text(valueDefault),
+            ElevatedButton(
+              onPressed: () async {
+                try {
+                  var result = await _googleSignIn.signIn();
+                  if (result != null) {
+                    final ggAuth = await result.authentication;
+                    var resApi = await dio.post(
+                      "https://79d0-2405-4802-27a-e3d0-d89a-1d7e-bc42-be20.ap.ngrok.io/api/auth/login/external-google",
+                      data: {
+                        "token": ggAuth.idToken,
+                        "client": Platform.isAndroid ? "Android" : "iOS",
+                      },
+                    );
+                    if (resApi.data['success'] == true) {
+                      print("Dang nhap thanh cong");
+                    } else {
+                      print(resApi.data["message"]);
+                    }
+                  }
+                  print(result);
+                } catch (error) {
+                  print(error);
+                }
+              },
+              child: const Text('SIGN IN GOOGLE'),
+            ),
             ElevatedButton(
               onPressed: () async {
                 await oauth.logout();

@@ -68,8 +68,21 @@ public class LoginWithGoogleCommandHandler : IRequestHandler<LoginWithGoogleComm
 
             var settings = new GoogleJsonWebSignature.ValidationSettings()
             {
-                Audience = new List<string> { _googleSettings.ClientId }
+                Audience = new List<string> {}
             };
+            switch (request.Data.Client)
+            {
+                case EClientId.Android:
+                    settings.Audience.ToList().Add(_googleSettings.ClientIdAndroid);
+                    break;
+                case EClientId.iOS:
+                    settings.Audience.ToList().Add(_googleSettings.ClientIdAndroid);
+                    break;
+                case EClientId.Web:
+                default:
+                    settings.Audience.ToList().Add(_googleSettings.ClientIdAndroid);
+                    break;
+            }
             var payload = await GoogleJsonWebSignature.ValidateAsync(request.Data.Token, settings);
             if (payload == null)
             {
